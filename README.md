@@ -1,5 +1,4 @@
 # CoinGecko ID Finder
-
 A web application that helps you find CoinGecko IDs for cryptocurrency tickers. Built out of the frustration with CoinGecko's unintuitive ID system, this tool finds CoinGecko IDs based on just a ticker symbol. Results are initially filtered by market capitalization, with additional granular sorting options available.
 
 ## Screenshot
