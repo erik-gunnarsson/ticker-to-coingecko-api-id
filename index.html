@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinGecko API ID Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🦎 CoinGecko API ID Finder</h1>
+        <h3>Convert ticker symbols to CoinGecko API IDs</h3>
+        
+        <div class="input-group">
+            <textarea id="target_tickers" placeholder="Start typing crypto tickers separated by commas (e.g., BTC, ETH, USDT)..."></textarea>
+        </div>
+
+        <label>Select columns to display (also used for copy/CSV export):</label>
+        <div class="column-options">
+            <label class="column-option">
+                <input type="checkbox" id="show_ticker" checked> Ticker
+            </label>
+            <label class="column-option">
+                <input type="checkbox" id="show_id" checked> API ID
+            </label>
+            <label class="column-option">
+                <input type="checkbox" id="show_link"> Link
+            </label>
+            <label class="column-option">
+                <input type="checkbox" id="show_match_type"> Match Type
+            </label>
+        </div>
+
+        <div>
+            <hr>
+        </div>
+
+        <div class="tab-container" id="resultsContainer" style="display: none;">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab(event, 'table')">Table View</button>
+                <button class="tab-button" onclick="openTab(event, 'json')">JSON View</button>
+            </div>
+
+            <div id="table" class="tab-content active">
+                <table id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>Ticker</th>
+                            <th>API ID</th>
+                            <th>Link</th>
+                            <th>Match Type</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="json" class="tab-content">
+                <div id="result"></div>
+            </div>
+        </div>
+
+        <div id="exportContainer" style="display: none;">
+            <hr>
+            <div class="column-selection">
+                <div class="action-buttons">
+                    <button onclick="copyResult()">Copy To Clipboard</button>
+                    <button onclick="downloadCSV()">Download CSV</button>
+                </div>
+            </div>
+        </div>
+        <p><span style="font-weight: bold;">Why?</span> CoinGecko's API ID naming system is frustrating to work with, this tool helps you quickly find API IDs for multiple tokens .</p>
+        <p>Not happy with the output, go stright to the source: <a href="https://docs.coingecko.com/v3.0.1/reference/coins-list" target="_blank">CoinGecko API Docs</a> / <a href="https://docs.google.com/spreadsheets/d/1wTTuxXt8n9q7C4NDXqQpI3wpKu1_5bGVmP9Xz0XGSyU/edit?gid=0#gid=0" target="_blank">Google Spreadsheet</a></p>
+
+        <footer>
+            <p>Drop suggestions on <a href="https://x.com/GunnarssonE" target="_blank">@GunnarssonE</a></p>
+            <p class="data-info">Not affiliated with CoinGecko. </span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 

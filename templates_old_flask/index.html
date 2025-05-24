@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Token ID Generator</title>
+    <title>API ID Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -282,7 +282,7 @@
             <input type="checkbox" id="show_ticker" checked> Ticker
         </label>
         <label class="column-option">
-            <input type="checkbox" id="show_id" checked> Token ID
+            <input type="checkbox" id="show_id" checked> API ID
         </label>
         <label class="column-option">
             <input type="checkbox" id="show_link"> Link
@@ -323,7 +323,7 @@
                 <thead>
                     <tr>
                         <th>Ticker</th>
-                        <th>Token ID</th>
+                        <th>API ID</th>
                         <th>Link</th>
                         <th>Match Type</th>
                     </tr>
@@ -466,7 +466,7 @@
             const thead = document.querySelector('#resultTable thead tr');
             thead.innerHTML = '';
             if (showTicker) thead.appendChild(createHeader('Ticker'));
-            if (showId) thead.appendChild(createHeader('Token ID'));
+            if (showId) thead.appendChild(createHeader('API ID'));
             if (showLink) thead.appendChild(createHeader('Link'));
             if (showMatchType) thead.appendChild(createHeader('Match Type'));
             
@@ -546,7 +546,7 @@
             
             const headers = [];
             if (showTicker) headers.push('Ticker');
-            if (showId) headers.push('Token ID');
+            if (showId) headers.push('API ID');
             if (showLink) headers.push('Link');
             if (showMatchType) headers.push('Match Type');
             
