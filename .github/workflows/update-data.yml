@@ -9,6 +9,8 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Updated, bot was failing
     
     steps:
     - uses: actions/checkout@v3
