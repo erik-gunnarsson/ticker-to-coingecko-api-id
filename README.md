@@ -1,6 +1,8 @@
 # CoinGecko ID Finder
 
-A static web application that helps you find CoinGecko IDs for cryptocurrency tickers. Built out of the frustration with CoinGecko's unintuitive ID system, this tool finds CoinGecko IDs based on just a ticker symbol. Results are initially filtered by market capitalization, with some fuzzy match proccessing after.
+Quick and easy batched CoinGecko API ID look up for tickers. 
+Results are initially filtered by market cap (updated daily), unmatched tickers are then fuzzy matched.
+Built out of the frustration of CoinGecko's unintuitive API ID system. 
 
 Live @ https://erik-gunnarsson.github.io/ticker-to-coingecko-api-id/
 
@@ -16,4 +18,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Disclaimer
 
-This tool is not affiliated with CoinGecko. It was built to help those working with the CoinGecko API.
+Not affiliated with CoinGecko. Just a simple tool to help those working with the CoinGecko API.
